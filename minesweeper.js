@@ -42,12 +42,18 @@ function startGame () {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);
   }
 
+  document.addEventListener("click", checkForWin);
+  document.addEventListener("contextmenu", checkForWin);
+
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
 
-  document.addEventListener("click", checkForWin);
-  document.addEventListener("contextmenu", checkForWin);
+  var reset = document.getElementById('reset');
+   reset.addEventListener('click', function(evt) { location.reload() })
 }
+
+
+
 
 //AUTOMATICALLY GENERATE THE GAME BOARD...
 
