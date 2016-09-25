@@ -131,5 +131,4 @@ for(var i = 0; i < surroundingCells.length; i++){
   }
 }
 return count;
-
 }
